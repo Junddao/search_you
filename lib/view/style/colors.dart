@@ -1,0 +1,78 @@
+import 'dart:ui';
+
+class MColors {
+  static const tomato = Color(0xffe73331);
+  static const warm_grey = Color(0xff999696);
+  static const warm_grey08 = Color.fromRGBO(153, 150, 150, 0.8);
+  static const white_two = Color(0xfff4f4f4);
+  static const white_two08 = Color.fromRGBO(244, 244, 244, 0.8);
+  static const whiteColor = Color.fromRGBO(254, 254, 254, 1.0);
+  static const white23 = Color.fromRGBO(255, 255, 255, 0.23);
+  static const azul = Color(0xff2f74d5);
+  static const darkish_blue = Color(0xff03318c);
+  static const pale_salmon = Color(0xffff9e9e);
+  static const deep_lilac = Color(0xff8a68ca);
+  static const jungle_green = Color(0xff038c60);
+  static const tan_green = Color(0xffacca68);
+  static const purple_red = Color(0xff8c034d);
+  static const pinkish_grey = Color(0xffb9b6b6);
+  static const pinkishGrey10 = Color.fromRGBO(185, 182, 182, 0.1);
+  static const grey_06 = Color(0xff383535);
+  static const grey_05 = Color(0xff666060);
+  static const golden_rod = Color(0xffeebb14);
+  static const white_three = Color(0xffdbdbdb);
+  static const white_three08 = Color(0xccdbdbdb);
+  static const black = Color(0xff000000);
+  static const blackColor = Color(0xff080606);
+  static const white = Color(0xfffefefe);
+  static const greyish = Color(0xffb8b8b8);
+  static const brownish_pink = Color(0xffb38d80);
+  static const grapefruit = Color(0xffff5252);
+  static const very_light_pink = Color(0xfff1f1f1);
+  static const kakao_yellow = Color(0xfffbe100);
+  static const kakao_brown = Color(0xff392020);
+  static const naver_green = Color(0xff2cb400);
+  static const facebook_blue = Color(0xff0079fc);
+  static const black36 = Color(0xff242424);
+  static const brownish_grey = Color(0xff6a6a6a);
+  static const brown_grey = Color(0xff7a7a7a);
+  static const tomato_10 = Color(0x1ae73331);
+  static const black_three = Color(0xff161616);
+  static const white_four = Color(0xfff8f8f8);
+  static const salmon = Color(0xfff87474);
+  static const splash_background = Color(0xFF2fbdf0);
+  static const mine_shaft = Color(0xFF2C2C2C);
+  static const boulder = Color(0xFF7C7C7C);
+  static const alabaster = Color(0xFFF8F8F8);
+  static const dodger_blue = Color(0xFF2789FF);
+  static const red = Color(0xFFFF000D);
+  static const malachite = Color(0xFF00CF37);
+  static const black_russian = Color(0xFF000001);
+  static const royal_blue = Color(0xFF3B7DED);
+  static const slate_gray = Color(0xFF707990);
+  static const thunder = Color(0xFF231F20);
+  static const dodger_blue_30 = Color(0x4D2789FF);
+  static const mercury = Color(0xFFE4E4E4);
+  static const laundry_blue = Color(0xFF2fbdf0);
+  static const dark_grey = Color(0xFF2c2c2c);
+  static const dark_grey80 = Color(0xCC2c2c2c);
+  static const white80 = Color(0xccffffff);
+  static const mine_shaft88 = Color(0x882c2c2c);
+  static const thunder80 = Color(0xcc231F20);
+  static const thunder99 = Color(0x99231F20);
+  static const dusty_gray = Color(0xff969696);
+  static const wild_watermelon = Color(0xFFFF6179);
+  static const dart_cold_cyan = Color(0xff48575B);
+  static const alto = Color(0xffdddddd);
+  static const silver = Color(0xffdddddd);
+  static const cold_spring_green = Color(0xff00B274);
+
+  static const defaultColor1 = Color(0xffffffff);
+  static const pressedColor1 = Color(0xffBFC78E);
+
+  static const defaultColor2 = Color(0xff525B48);
+  static const pressedColor2 = Color(0xff6F7765);
+
+  static const defaultNextButtonColor = Color(0xff3B6055);
+  static const pressedNextButtonColor = Color(0xff4B7468);
+}
