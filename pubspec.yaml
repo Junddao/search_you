@@ -25,9 +25,14 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   easy_localization: ^3.0.0
+  firebase_auth: ^2.0.0
   flutter_easyloading: ^3.0.0
+  font_awesome_flutter: ^9.1.0
+  google_sign_in: ^5.0.4
+  logger: ^1.0.0
   pedantic: ^1.11.1
   provider: ^5.0.0
+  shared_preferences: ^2.0.6
 
 dev_dependencies:
   flutter_test:

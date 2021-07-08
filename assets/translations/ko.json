@@ -1,4 +1,6 @@
 {
     "search" :"찾기",
-    "account" : "계정"
+    "account" : "계정",
+    "text_easy": "간편",
+    "text_login": "로그인"
 }

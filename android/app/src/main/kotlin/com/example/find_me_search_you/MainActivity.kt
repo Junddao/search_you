@@ -1,4 +1,4 @@
-package com.example.find_me_search_you
+package com.jtb.searchyou
 
 import io.flutter.embedding.android.FlutterActivity
 
