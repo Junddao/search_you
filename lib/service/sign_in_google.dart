@@ -1,10 +1,10 @@
 import 'package:find_me_search_you/model/shared_preferences_data.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class GoogleSignInProvider extends ChangeNotifier {
+class GoogleSignIn {
   final googleSignIn = GoogleSignIn();
   final snsType = 'GOOGLE';
 
@@ -34,8 +34,6 @@ class GoogleSignInProvider extends ChangeNotifier {
     } catch (e) {
       print(e.toString());
     }
-
-    notifyListeners();
   }
 
   Future<void> logout() async {

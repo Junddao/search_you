@@ -29,10 +29,12 @@ dependencies:
   flutter_easyloading: ^3.0.0
   font_awesome_flutter: ^9.1.0
   google_sign_in: ^5.0.4
+  kakao_flutter_sdk: ^0.6.4
   logger: ^1.0.0
   pedantic: ^1.11.1
   provider: ^5.0.0
   shared_preferences: ^2.0.6
+  sign_in_with_apple: ^3.0.0
 
 dev_dependencies:
   flutter_test:

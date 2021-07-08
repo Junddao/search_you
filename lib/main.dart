@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:find_me_search_you/service/sign_in_apple.dart';
 import 'package:find_me_search_you/provider/get_user_data_provider.dart';
-import 'package:find_me_search_you/provider/google_sign_in.dart';
+import 'package:find_me_search_you/service/sign_in_google.dart';
+import 'package:find_me_search_you/service/sign_in_kakao.dart';
 import 'package:find_me_search_you/route.dart';
 import 'package:find_me_search_you/view/page/splash/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -35,9 +37,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<GoogleSignInProvider>(
-          create: (_) => GoogleSignInProvider(),
-        ),
         ChangeNotifierProvider<GetUserDataProvider>(
           create: (_) => GetUserDataProvider(),
         ),

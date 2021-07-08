@@ -4,8 +4,10 @@ import 'package:find_me_search_you/generated/locale_keys.g.dart';
 import 'package:find_me_search_you/model/shared_preferences_data.dart';
 import 'package:find_me_search_you/model/social_login_data.dart';
 import 'package:find_me_search_you/model/user_info_data.dart';
+import 'package:find_me_search_you/service/sign_in_apple.dart';
 import 'package:find_me_search_you/provider/get_user_data_provider.dart';
-import 'package:find_me_search_you/provider/google_sign_in.dart';
+import 'package:find_me_search_you/service/sign_in_google.dart';
+import 'package:find_me_search_you/service/sign_in_kakao.dart';
 import 'package:find_me_search_you/view/style/colors.dart';
 import 'package:find_me_search_you/view/style/size_config.dart';
 import 'package:find_me_search_you/view/style/text_styles.dart';
@@ -33,30 +35,67 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  void _onClickKakaoLogin() {
+  void _onClickKakaoLogin() async {
     print('[${runtimeType.toString()} : _onClickKakaoLogin');
-    // var messageSignInKakao = MessageSignInKakao();
-    // sendMessage(messageSignInKakao);
+    var signInKakao = SignInKakao();
+    await signInKakao.signInWithKakao();
+
+    // var _data = <String, dynamic>{};
+    // signInKakao.user.providerData.forEach((item) {
+    //   if (item.providerId.contains('google')) {
+    //     _data = {
+    //       'id': item.uid,
+    //       'name': item.displayName,
+    //       'email': item.email,
+    //       'phothUrl': item.photoURL,
+    //       'mobile': item.phoneNumber,
+    //     };
+    //   }
   }
 
   void _onClickGoogleLogin() async {
     print('[${runtimeType.toString()} : _onClickGoogleLogin');
-    var provider = context.read<GoogleSignInProvider>();
-    await provider.googleLogin();
+    var singInGoogle = SignInGoogle();
+    await singInGoogle.googleLogin();
 
-    var userInfoData = UserInfoData.fromMap({
-      'id': provider.user.uid,
-      'name': provider.user.displayName!,
-      'email': provider.user.email,
-      'phothUrl': provider.user.photoURL!,
-      'mobile': provider.user.phoneNumber,
+    var _data = <String, dynamic>{};
+    singInGoogle.user.providerData.forEach((item) {
+      if (item.providerId.contains('google')) {
+        _data = {
+          'id': item.uid,
+          'name': item.displayName,
+          'email': item.email,
+          'phothUrl': item.photoURL,
+          'mobile': item.phoneNumber,
+        };
+      }
     });
+
+    var userInfoData = UserInfoData.fromMap(_data);
 
     context.read<GetUserDataProvider>().userInfoData = userInfoData;
   }
 
-  void _onClickAppleLogin() {
+  void _onClickAppleLogin() async {
     print('[${runtimeType.toString()} : _onClickAppleLogin');
+    var signInApple = SignInApple();
+    await signInApple.signInWithApple();
+
+    var _data = <String, dynamic>{};
+    signInApple.user.providerData.forEach((item) {
+      if (item.providerId.contains('apple')) {
+        _data = {
+          'id': item.uid,
+          'name': item.displayName,
+          'email': item.email,
+          'phothUrl': item.photoURL,
+          'mobile': item.phoneNumber,
+        };
+      }
+    });
+    var userInfoData = UserInfoData.fromMap(_data);
+
+    context.read<GetUserDataProvider>().userInfoData = userInfoData;
   }
 
   Widget _socialLoginHeader() {

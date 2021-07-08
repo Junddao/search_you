@@ -1,5 +1,5 @@
 import 'package:find_me_search_you/provider/get_user_data_provider.dart';
-import 'package:find_me_search_you/provider/google_sign_in.dart';
+import 'package:find_me_search_you/service/sign_in_google.dart';
 import 'package:find_me_search_you/view/style/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       actions: [
         TextButton(
           onPressed: () async {
-            await GoogleSignInProvider().logout();
+            await SignInGoogle().logout();
 
             Logger().d('sign Out');
             // await Navigator.of(context)
