@@ -40,17 +40,15 @@ class _LoginPageState extends State<LoginPage> {
     var signInKakao = SignInKakao();
     await signInKakao.signInWithKakao();
 
-    // var _data = <String, dynamic>{};
-    // signInKakao.user.providerData.forEach((item) {
-    //   if (item.providerId.contains('google')) {
-    //     _data = {
-    //       'id': item.uid,
-    //       'name': item.displayName,
-    //       'email': item.email,
-    //       'phothUrl': item.photoURL,
-    //       'mobile': item.phoneNumber,
-    //     };
-    //   }
+    var _data = <String, dynamic>{
+      'id': signInKakao.user.uid,
+      'name': signInKakao.user.displayName,
+      'email': signInKakao.user.email,
+      'phothUrl': signInKakao.user.photoURL,
+      'mobile': signInKakao.user.phoneNumber,
+    };
+    var userInfoData = UserInfoData.fromMap(_data);
+    context.read<GetUserDataProvider>().userInfoData = userInfoData;
   }
 
   void _onClickGoogleLogin() async {

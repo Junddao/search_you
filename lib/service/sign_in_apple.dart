@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
-class AppleSignIn {
+class SignInApple {
   late User user;
   final snsType = 'APPLE';
   Future<void> signInWithApple() async {

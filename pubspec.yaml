@@ -24,17 +24,24 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  dio: ^4.0.0
   easy_localization: ^3.0.0
   firebase_auth: ^2.0.0
   flutter_easyloading: ^3.0.0
+  flutter_web_auth: ^0.3.0
   font_awesome_flutter: ^9.1.0
   google_sign_in: ^5.0.4
+  http: ^0.13.3
+  json_annotation: ^4.0.1
   kakao_flutter_sdk: ^0.6.4
   logger: ^1.0.0
+  package_info: ^2.0.2
   pedantic: ^1.11.1
+  platform: ^3.0.0
   provider: ^5.0.0
   shared_preferences: ^2.0.6
   sign_in_with_apple: ^3.0.0
+  uuid: ^3.0.4
 
 dev_dependencies:
   flutter_test:
